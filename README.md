@@ -21,10 +21,6 @@ Aviya Ohayon Portfolio
 
 The Portfolio Website is a personal showcase of my skills, projects, and achievements. It serves as a dynamic and interactive resume, providing visitors with insights into my professional journey, areas of expertise, and the projects I've worked on. This online portfolio is designed to leave a lasting impression and convey my passion for technology and creativity.
 
-## Technologies Used
-
-List the technologies, languages, and frameworks used in your project.
-
 ## Key Features
 
 -Home Page: A visually appealing introduction that welcomes visitors and provides a brief overview of who I am.
