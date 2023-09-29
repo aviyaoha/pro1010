@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Number 3</title>
+    <style>
+        @media screen {
+            .container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-areas: "bgc landings";
+            }
+        }
+
+        @media (width<35em) {
+            .landing {
+                top: 50%;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "bgc"
+                    "landings";
+            }
+
+        }
+
+        .bcgimage {
+            /* Added position property */
+            /* position: absolute; */
+            /* Layout Properties */
+            /* top: 0px;
+            left: 0px;*/
+            max-width: 720px;
+            height: 80%;
+            grid-area: bgc;
+
+            /* UI Properties */
+            /* background: transparent url('images/Coffee.png') 0% 0% no-repeat padding-box; */
+            opacity: 1;
+        }
+
+        img {
+            display: flex;
+            max-width: 100%;
+        }
+
+
+
+        .landing {
+            /* Added position property */
+            /* direction: rtl;
+            display: flex; */
+            grid-area: landings;
+            max-width: 600px;
+            height: 100%;
+            border-radius: 0.5px;
+            justify-content: center;
+            align-items: center;
+            left: auto;
+            right: 0;
+            margin-right: 10vh;
+
+        }
+
+        .text-area {
+            background-color: #fff;
+            width: 462px;
+            height: auto;
+        }
+
+        .myTitle {
+            position: fixed;
+            /* Layout Properties */
+            top: 33%;
+            left: 0;
+            right: 5%;
+            width: 462px;
+            margin: auto;
+            margin-right: 10vw;
+            /* UI Properties */
+            text-align: right;
+            font: normal normal 900 26.5px Heebo;
+            letter-spacing: 0px;
+            color: #020253;
+            opacity: 1;
+        }
+
+        .textBox {
+            position: fixed;
+            /* Layout Properties */
+            top: 40%;
+            left: 0;
+            right: 5%;
+            width: 230px;
+            margin: auto;
+            margin-right: 10vw;
+
+            /* UI Properties */
+            text-align: right;
+            font: normal normal normal 11px Heebo;
+            letter-spacing: 0px;
+            color: #020253;
+            opacity: 1;
+        }
+
+        .formContainer {
+            position: fixed;
+            /* Layout Properties */
+            top: 48%;
+            left: 0;
+            right: 5%;
+            width: 230px;
+            margin: auto;
+            margin-right: 10vw;
+
+        }
+
+        .formInputs {
+            /* Layout Properties */
+            width: 100%;
+            height: 25px;
+            margin-bottom: 20px;
+            /* UI Properties */
+            background: #E5EEFF 0% 0% no-repeat padding-box;
+            opacity: 1;
+            font: normal normal bold 16px/24px Heebo;
+            border: none;
+            border-bottom: 3px solid #020253;
+
+
+        }
+
+        .inputLabel {
+            direction: rtl;
+            text-align: right;
+            font: normal normal bold 10px Heebo;
+            letter-spacing: 0px;
+            color: #2C2C2C;
+            opacity: 1;
+        }
+
+        .sendButton {
+            top: 611px;
+            left: 1382px;
+            width: 83px;
+            height: 25px;
+            background: #020253 0% 0% no-repeat padding-box;
+            text-align: center;
+            font: normal normal bold 11px Heebo;
+            letter-spacing: 0.33px;
+            color: #FFFFFF;
+            opacity: 1;
+
+        }
+
+        .message {
+            top: 611px;
+            left: 1382px;
+            width: 400px;
+            height: 80px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            opacity: 1;
+            font: normal normal bold 11px Heebo;
+            color: #020253;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+
+
+        /* @media screen and (min-width: 601px) {
+            .content {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .container {
+                flex-direction: row;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bcgimage">
+            <img src="Images/Coffee.png" alt="">
+        </div>
+        <div class="box1">
+
+        </div>
+
+        <div class="landing ">
+            <div class="text-area">
+                <h1 class="myTitle ">קפה טוב לבוקר טוב</h1>
+                <p class="textBox ">לקבלת קופון לקפה חינם ומפנק שיפתח לכם את היום בחיוך, יש למלא את הפרטים:
+                </p>
+            </div>
+            <div class="formContainer ">
+                <form>
+                    <div class="inputContainer">
+                        <label for="fullName" class="inputLabel">שם מלא</label>
+                        <input type="text" class="formInputs" id="fullName">
+                    </div>
+                    <div class="inputContainer">
+                        <label for="email" class="inputLabel">דוא"ל</label>
+                        <input type="text" class="formInputs" id="email">
+                    </div>
+                    <button type="button" class="sendButton" id="send-button">שליחה</button>
+                    <div class="message hidden" id="thank-you-message">
+                        תודה רבה! פרטיך נקלטו
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        // Function to display the thank you message and clear the button
+        function sendDetails() {
+            // Display the thank you message
+            const thankYouMessage = document.getElementById('thank-you-message');
+            thankYouMessage.classList.remove('hidden');
+
+            // Clear the button text
+            const sendButton = document.getElementById('send-button');
+            sendButton.textContent = '';
+
+            // Hide the thank you message and restore the button text after a few seconds (e.g., 5 seconds)
+            setTimeout(function () {
+                thankYouMessage.classList.add('hidden');
+            }, 3000);
+
+            if (sendButton.textContent === 'שליחה') {
+                sendButton.textContent = 'Click Again';
+            } else {
+                sendButton.textContent = 'שליחה';
+            }
+        }
+
+        // Attach the sendDetails function to the button's click event
+        const sendButton = document.getElementById('send-button');
+        sendButton.addEventListener('click', sendDetails);
+
+    </script>
+
+</body>
+
+</html>

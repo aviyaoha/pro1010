@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Number 3</title>
+    <style>
+        @media screen and (min-width: 601px) {
+            .content {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        /* .perent {
+            display: flex;
+        }
+
+        .box {
+            flex: row;
+        } */
+
+        .bgcImage {
+            position: absolute;
+            left: 0;
+            top: 0;
+            max-width: 600px;
+            height: 100%;
+
+            /* background: url(Images/Coffee.png) 650px/650px; */
+
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .content {
+            display: flex;
+            max-width: 600px;
+            direction: rtl;
+            height: 100%;
+            background-color: #fff;
+            border-color: #707070;
+            border-radius: 0.5px;
+            justify-content: center;
+            align-items: center;
+            left: auto;
+            right: 0;
+            margin-right: 10vh;
+
+        }
+
+
+        .myTitle {
+            width: 207.5px;
+            text-align: right;
+            font: normal normal 12pt Heebo;
+            letter-spacing: 0px;
+            color: #020253;
+            opacity: 1;
+        }
+
+        .description {
+            width: 207.5px;
+            text-align: right;
+            font: normal normal normal 7.5pt Heebo;
+            letter-spacing: 0px;
+            color: #020253;
+            opacity: 1;
+        }
+
+
+        .formContainer {
+            position: fixed;
+            /* Layout Properties */
+            top: 217px;
+            left: 0;
+            right: 0;
+            width: 209px;
+            margin: auto;
+            margin-right: 10vh;
+
+        }
+
+        .formInputs {
+            /* Layout Properties */
+            width: 100%;
+            height: 25px;
+            margin-bottom: 20px;
+            /* UI Properties */
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #D31C75;
+            opacity: 1;
+            font: normal normal bold 16px/24px Heebo;
+        }
+
+        .inputLabel {
+            direction: rtl;
+            text-align: right;
+            font: normal normal bold 16px/24px Heebo;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 1;
+        }
+
+        .sendButton {
+            top: 611px;
+            left: 1382px;
+            width: 166px;
+            height: 50px;
+            background: #D31C75 0% 0% no-repeat padding-box;
+            opacity: 1;
+            font: normal normal bold 16px/24px Heebo;
+            color: #FFFFFF;
+
+        }
+
+        .message {
+            top: 611px;
+            left: 1382px;
+            width: 400px;
+            height: 80px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            opacity: 1;
+            font: normal normal bold 30px/45px Heebo;
+            color: #D31C75;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="perent">
+            <div class="box bgcImage">
+                <img src="Images/Coffee.png" alt="">
+            </div>
+            <div class="box content">
+                <div class="text-area">
+                    <div class="myTitle">
+                        <h1>קפה טוב לבוקר טוב</h1>
+
+                    </div>
+                    <div class="description">
+                        <p0>לקבלת קופון לקפה חינם ומפנק שיפתח לכם את היום בחיוך, יש למלא את הפרטים:</p0>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="formContainer">
+                <form>
+                    <div class="inputContainer">
+                        <label for="fullName" class="inputLabel">שם מלא</label>
+                        <input type="text" class="formInputs" id="fullName">
+                    </div>
+                    <div class="inputContainer">
+                        <label for="email" class="inputLabel">דוא"ל</label>
+                        <input type="text" class="formInputs" id="email">
+                    </div>
+                    <button type="button" class="sendButton" id="send-button">שליחה</button>
+                    <div class="message hidden" id="thank-you-message">
+                        תודה רבה! פרטיך נקלטו
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

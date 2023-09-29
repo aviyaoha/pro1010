@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Number 1</title>
+
+    <style>
+        .bcgimage {
+            /* Added position property */
+            position: relative;
+            /* Layout Properties */
+            top: 0px;
+            left: 0px;
+            max-width: 1920px;
+            height: 590px;
+
+            /* UI Properties */
+            background: transparent url('images/Path15.png') 0% 0% no-repeat padding-box;
+            opacity: 1;
+        }
+
+
+        .landing {
+            /* Added position property */
+            position: absolute;
+            direction: rtl;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            margin-right: 90px;
+            /* Layout Properties */
+            top: 157px;
+            right: 0;
+            left: 0;
+            width: 569px;
+            height: 643px;
+            /* UI Properties */
+            background: #1A1A1AD4 0% 0% no-repeat padding-box;
+            opacity: 1;
+
+        }
+
+        .myTitle {
+            position: fixed;
+            /* Layout Properties */
+            top: 233px;
+            left: 0;
+            right: 0;
+            width: 420px;
+            margin: auto;
+            margin-right: 164.5px;
+            /* UI Properties */
+            text-align: right;
+            font: normal normal 900 36px/53px Heebo;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 1;
+        }
+
+        .textBox {
+            position: fixed;
+            /* Layout Properties */
+            top: 307px;
+            left: 0;
+            right: 0;
+            width: 417px;
+            margin: auto;
+            margin-right: 166px;
+
+            /* UI Properties */
+            text-align: right;
+            font: normal normal normal 20px/29px Heebo;
+            letter-spacing: 0px;
+            color: #F9F9F9;
+            opacity: 1;
+        }
+
+        .formContainer {
+            position: fixed;
+            /* Layout Properties */
+            top: 434px;
+            left: 0;
+            right: 0;
+            width: 418px;
+            margin: auto;
+            margin-right: 165.5px;
+
+        }
+
+        .formInputs {
+            /* Layout Properties */
+            width: 100%;
+            height: 50px;
+            margin-bottom: 20px;
+            /* UI Properties */
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #D31C75;
+            opacity: 1;
+            font: normal normal bold 16px/24px Heebo;
+        }
+
+        .inputLabel {
+            direction: rtl;
+            text-align: right;
+            font: normal normal bold 16px/24px Heebo;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 1;
+        }
+
+        .sendButton {
+            top: 611px;
+            left: 1382px;
+            width: 166px;
+            height: 50px;
+            background: #D31C75 0% 0% no-repeat padding-box;
+            opacity: 1;
+            font: normal normal bold 16px/24px Heebo;
+            color: #FFFFFF;
+
+        }
+
+        .message {
+            top: 611px;
+            left: 1382px;
+            width: 400px;
+            height: 80px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            opacity: 1;
+            font: normal normal bold 30px/45px Heebo;
+            color: #D31C75;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bcgimage">
+        </div>
+        <div class="box1">
+
+        </div>
+
+        <div class="landing ">
+            <h1 class="myTitle ">תן לנו להוביל אותך קדימה</h1>
+            <p class="textBox ">לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש “ממלא מקום” בעת
+                עריכ.
+            </p>
+            <div class="formContainer ">
+                <form>
+                    <div class="inputContainer">
+                        <label for="fullName" class="inputLabel">שם מלא</label>
+                        <input type="text" class="formInputs" id="fullName">
+                    </div>
+                    <div class="inputContainer">
+                        <label for="email" class="inputLabel">דוא"ל</label>
+                        <input type="text" class="formInputs" id="email">
+                    </div>
+                    <button type="button" class="sendButton" id="send-button">שליחה</button>
+                    <div class="message hidden" id="thank-you-message">
+                        תודה רבה! פרטיך נקלטו
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Function to display the thank you message and clear the button
+        function sendDetails() {
+            // Display the thank you message
+            const thankYouMessage = document.getElementById('thank-you-message');
+            thankYouMessage.classList.remove('hidden');
+
+            // Clear the button text
+            const sendButton = document.getElementById('send-button');
+            sendButton.textContent = '';
+
+            // Hide the thank you message and restore the button text after a few seconds (e.g., 5 seconds)
+            setTimeout(function () {
+                thankYouMessage.classList.add('hidden');
+            }, 3000);
+
+            if (sendButton.textContent === 'שליחה') {
+                sendButton.textContent = 'Click Again';
+            } else {
+                sendButton.textContent = 'שליחה';
+            }
+        }
+
+        // Attach the sendDetails function to the button's click event
+        const sendButton = document.getElementById('send-button');
+        sendButton.addEventListener('click', sendDetails);
+
+    </script>
+</body>
+
+</html>
