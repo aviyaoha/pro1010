@@ -40,7 +40,6 @@ Responsive Design: Ensures the website looks and functions well on various devic
 Aesthetic and User-Friendly Design: A clean, visually appealing design with intuitive navigation, making it easy for visitors to explore my portfolio.
 
 ## Purpose
-The purpose of this Portfolio Website is to:
 
 Showcase My Work: Display my projects, skills, and achievements to potential employers, clients, and collaborators.
 
