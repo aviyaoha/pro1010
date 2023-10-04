@@ -321,3 +321,11 @@ body section:last-of-type {
     text-align: center;
     width: 100%;
 }
+
+@media (width<35em) {
+    .myLink {
+        margin-left: 1.5vh;
+        margin-right: 1.5vh;
+    }
+
+}
