@@ -91,6 +91,9 @@
    }
 
    @media (width<35em) {
+      h0{
+         font: normal normal normal 14vh Satisfy;
+      }
        p0 {
            margin-top: 5%;
        }
