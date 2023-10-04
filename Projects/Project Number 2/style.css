@@ -17,7 +17,7 @@
 
    h0 {
        text-align: center;
-       font: normal normal normal 80px Satisfy;
+       font: normal normal normal 20vh Satisfy;
        letter-spacing: 0px;
        color: #FFFFFF;
        text-shadow: 0px 0px 36px #00000087;
@@ -26,7 +26,7 @@
 
    p0 {
        text-align: center;
-       font: normal normal normal 16px Varela Round;
+       font: normal normal normal 4vh Varela Round;
        letter-spacing: 0px;
        color: #FFFFFF;
        opacity: 1;
@@ -34,7 +34,7 @@
 
    p1 {
        text-align: center;
-       font: normal normal normal 8px Varela Round;
+       font: normal normal normal 1.5vh Varela Round;
        letter-spacing: 0px;
        color: #F9F9F9;
        opacity: 1;
@@ -85,7 +85,7 @@
 
    @media screen {
        .textArea {
-           margin-top: 20%;
+           margin-top: 17%;
        }
 
    }
