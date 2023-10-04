@@ -327,5 +327,9 @@ body section:last-of-type {
         margin-left: 1.5vh;
         margin-right: 1.5vh;
     }
+    
+    .buttonContainer{
+        margin-top: 30vh;
+    }
 
 }
